@@ -1,39 +1,35 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import { useRouter } from "next/navigation";
-
-import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-
-import { tools } from "@/constants";
+import React, {useEffect, useState} from "react";
+import { modules } from "@/constants";
+import { checkSubscription } from "@/lib/subscription";
+import ModuleCard from "@/components/module-card";
 
 export default function DashboardPage() {
-  const router = useRouter();
+  const [isPRO, setIsPRO] = useState(false);
+
+  useEffect(() => {
+    const getSubscription = async () => {
+      return await checkSubscription();
+    };
+    const isPro = getSubscription().then(resp => {
+      setIsPRO(resp);
+    });
+  }, [isPRO])
 
   return (
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          Explore the power of AI
+          Seu painel
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          Chat with the smartest AI - Experience the power of AI
+          Comece a aprender sobre finanaças agora de forma fácil e divertida.
         </p>
       </div>
-      <div className="px-4 md:px-20 lg:px-32 space-y-4">
-        {tools.map((tool) => (
-          <Card onClick={() => router.push(tool.href)} key={tool.href} className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer">
-            <div className="flex items-center gap-x-4">
-              <div className={cn("p-2 w-fit rounded-md", tool.bgColor)}>
-                <tool.icon className={cn("w-8 h-8", tool.color)} />
-              </div>
-              <div className="font-semibold">
-                {tool.label}
-              </div>
-            </div>
-            <ArrowRight className="w-5 h-5" />
-          </Card>
+      <div className="px-4 md:px-20 lg:px-32 space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 2xl:grid-cols-4 md:gap-4">
+        {modules.map((module) => (
+          <ModuleCard key={module.href} active={isPRO ? true : !module.premium} href={module.href} icon={module.icon} label={module.label} description={module.description}/>
         ))}
       </div>
     </div>

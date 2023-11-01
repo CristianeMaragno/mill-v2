@@ -1,3 +1,5 @@
+import { ChatBot } from "@/components/chatbot";
+
 const LandingLayout = ({
   children
 }: {
@@ -8,6 +10,7 @@ const LandingLayout = ({
       <div className="h-full w-full">
         {children}
       </div>
+      <ChatBot/>
     </main>
    );
 }

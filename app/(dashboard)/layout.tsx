@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import { Sidebar } from "@/components/sidebar";
 import { checkSubscription } from "@/lib/subscription";
 import { getApiLimitCount } from "@/lib/api-limit";
+import { ChatBot } from "@/components/chatbot";
 
 const DashboardLayout = async ({
   children,
@@ -20,6 +21,7 @@ const DashboardLayout = async ({
         <Navbar />
         {children}
       </main>
+      <ChatBot/>
     </div>
    );
 }

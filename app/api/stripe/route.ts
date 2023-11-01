@@ -43,10 +43,10 @@ export async function GET() {
           price_data: {
             currency: "BRL",
             product_data: {
-              name: "Name Pro",
-              description: "Unlimited AI Generations"
+              name: "Mill Premium",
+              description: "Acesso total da plataforma"
             },
-            unit_amount: 2000,
+            unit_amount: 1599,
             recurring: {
               interval: "month"
             }

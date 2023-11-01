@@ -1,41 +1,61 @@
-import { Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
+import { Calculator, CandlestickChart, Heart, Pencil, PiggyBank, Video, Wrench } from "lucide-react";
 
 export const MAX_FREE_COUNTS = 5;
 
+export const features = [
+  {
+    label: 'Vídeo aulas completas',
+    icon: Video,
+    href: '/tools',
+    color: "text-sky-500",
+    bgColor: "bg-sky-500/10",
+  },
+  {
+    label: 'Ferramentas',
+    icon: Wrench,
+    href: '/tools',
+    color: "text-violet-500",
+    bgColor: "bg-violet-500/10",
+  }
+];
+
 export const tools = [
   {
-    label: 'Conversation',
-    icon: MessageSquare,
-    href: '/conversation',
+    label: 'Calculadora de juros',
+    icon: Calculator,
+    href: '/tools/calculator',
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
   },
   {
-    label: 'Music',
-    icon: Music,
-    href: '/music',
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500/10",
+    label: 'Mapa de sonhos',
+    icon: Heart,
+    href: '/tools/dreams',
+    color: "text-violet-500",
+    bgColor: "bg-violet-500/10",
+  }
+];
+
+export const modules = [
+  {
+    label: 'Finanças pessoais',
+    icon: Pencil,
+    href: '/courses/1',
+    description: "Aprenda como controlar melhor suas finanças pessoais",
+    premium: false
   },
   {
-    label: 'Image',
-    icon: ImageIcon,
-    color: "text-pink-700",
-    bgColor: "bg-pink-700/10",
-    href: '/image',
+    label: 'Investimentos I',
+    icon: PiggyBank,
+    href: '/courses/2',
+    description: "Aprenda como controlar melhor suas finanças pessoais",
+    premium: false
   },
   {
-    label: 'Video',
-    icon: VideoIcon,
-    color: "text-orange-700",
-    bgColor: "bg-orange-700/10",
-    href: '/video',
-  },
-  {
-    label: 'Code',
-    icon: Code,
-    color: "text-green-700",
-    bgColor: "bg-green-700/10",
-    href: '/code',
-  },
+    label: 'Investimentos II',
+    icon: CandlestickChart,
+    href: '/courses/3',
+    description: "Aprenda como controlar melhor suas finanças pessoais",
+    premium: true
+  }
 ];
