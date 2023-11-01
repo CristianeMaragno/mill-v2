@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project is a finance learning platform where the user creates their account and can watch classes about investments, personal finances and use relevante tools like a interest calculator and much more.
 
-## Getting Started
+# How to develop
 
-First, run the development server:
+## Install dependencies
+This project uses [npm](https://www.npmjs.com/) as it's package manager. To install dependencies, run:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm install
+``` 
+
+## Environment variables
+Copy the .env.example file to a new file called .env on the project root and replace the values with the sensitive information needed.
+
+## Database setup
+This project use prisma for database interation, to create the schema, run
+```bash
+npx prisma generate
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To update the database, use
+```bash
+npx prisma db push
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+And to explore and manipulate your data locally
+```bash
+npx prisma studio
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Simulate payment in local enviromment
 
-## Learn More
+```bash
+stripe login
+```
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+stripe listen --forward-to localhost:3000/api/webhook
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Run dev server
+After installing, you may start the project with:
+```bash
+npm run dev
+```
+## Other informations
+If you are not familiar with the different technologies used in this project, please refer to the respective docs.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org)
+- [Clerk](https://clerk.com/g)
+- [Prisma](https://prisma.io)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Axios](https://axios-http.com/)
+- [Stripe](https://stripe.com/br)
+- [Typebot](https://www.typebot.io/)
