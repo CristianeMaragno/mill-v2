@@ -35,7 +35,7 @@ export const LandingContent = () => {
       <div id="section-prices" className="bg-sky-700 bg-opacity-40 px-20 py-16">
         <h2 className="text-sky-700 text-4xl font-semibold text-center">Preços</h2>
         <p className="text-neutral-100 py-8 text-center">Selecione o plano que mais cobina com você</p>
-        <div className="space-y-8 lg:grid justify-items-center lg:grid-cols-3 sm:gap-6 xl:gap-12 lg:space-y-0">
+        <div className="space-y-8 lg:grid justify-items-center lg:grid-cols-2 sm:gap-6 xl:gap-12 lg:space-y-0">
           <PrincingCard price={0} name="Gratuito" description="Melhor opção para iniciar">
             <ul className="mb-8 space-y-4 text-left">
               <li className="flex items-center space-x-3">Lorem ipsum</li>
