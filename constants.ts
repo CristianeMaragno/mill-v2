@@ -47,7 +47,7 @@ export const modules = [
   {
     label: 'Investimentos I',
     icon: PiggyBank,
-    href: '/courses/2',
+    href: '/courses/2177a7fc-14f4-4b4a-a69b-de1305386bd3',
     description: "Aprenda como controlar melhor suas finanças pessoais",
     premium: false
   },
