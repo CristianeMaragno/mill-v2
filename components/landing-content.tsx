@@ -1,8 +1,9 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "./ui/button";
 import PrincingCard from "./pricing-card";
+import { Dumbbell, Gamepad2, Microscope } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const LandingContent = () => {
   return (
@@ -12,20 +13,20 @@ export const LandingContent = () => {
         <p className="text-gray-400 py-8 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br/> 
         incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet.</p>
         <div className="space-y-8 lg:grid justify-items-center lg:grid-cols-3 sm:gap-6 xl:gap-6 lg:space-y-0 lg:mx-20">
-          <div className="px-8 flex flex-col">
-            <span className="features-icon material-symbols-outlined text-sky-700 text-center flex justify-center">stadia_controller</span>
+          <div className="px-8 flex items-center flex-col">
+            <Gamepad2 size={120} className="text-gray-500 text-center mb-4"/>
             <h3 className="text-gray-500 text-1xl font-semibold text-center mb-4">Gamificação</h3>
             <p className="text-gray-400 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
           </div>
 
-          <div className="px-8 flex flex-col">
-            <span className="features-icon material-symbols-outlined text-sky-700 text-center flex justify-center">school</span>
+          <div className="px-8 flex items-center flex-col">
+            <Microscope size={120} className="text-gray-500 text-center mb-4"/>
             <h3 className="text-gray-500 text-1xl font-semibold text-center mb-4">Educação Financeira</h3>
             <p className="text-gray-400 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
           </div>
 
-          <div className="px-8 flex flex-col">
-            <span className="features-icon material-symbols-outlined text-sky-700 text-center flex justify-center">fitness_center</span>
+          <div className="px-8 flex items-center flex-col">
+            <Dumbbell size={120} className="text-gray-500 text-center mb-4"/>
             <h3 className="text-gray-500 text-1xl font-semibold text-center mb-4">Prática</h3>
             <p className="text-gray-400 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
           </div>

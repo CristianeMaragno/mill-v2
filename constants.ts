@@ -6,7 +6,7 @@ export const features = [
   {
     label: 'Vídeo aulas completas',
     icon: Video,
-    href: '/tools',
+    href: '/dashboard',
     color: "text-sky-500",
     bgColor: "bg-sky-500/10",
   },
@@ -40,7 +40,7 @@ export const modules = [
   {
     label: 'Finanças pessoais',
     icon: Pencil,
-    href: '/courses/1',
+    href: '/courses/8929b096-3379-4d6e-a643-8dac5a22b779',
     description: "Aprenda como controlar melhor suas finanças pessoais",
     premium: false
   },

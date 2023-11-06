@@ -5,7 +5,7 @@ export const getProgress = async (
   courseId: string,
 ): Promise<number> => {
   try {
-    const publishedChapters = await prismadb.chapter.findMany({
+    const chapters = await prismadb.chapter.findMany({
       where: {
         courseId: courseId
       },
@@ -14,19 +14,19 @@ export const getProgress = async (
       }
     });
 
-    const publishedChapterIds = publishedChapters.map((chapter) => chapter.id);
+    const chapterIds = chapters.map((chapter) => chapter.id);
 
     const validCompletedChapters = await prismadb.userProgress.count({
       where: {
         userId: userId,
         chapterId: {
-          in: publishedChapterIds,
+          in: chapterIds,
         },
         isCompleted: true,
       }
     });
 
-    const progressPercentage = (validCompletedChapters / publishedChapterIds.length) * 100;
+    const progressPercentage = (validCompletedChapters / chapterIds.length) * 100;
 
     return progressPercentage;
   } catch (error) {
