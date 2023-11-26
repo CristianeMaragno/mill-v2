@@ -37,6 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    //The ClerkProvider encapsulates the document body, where all pages are rendered, allowing it to effectively manage user authentication. Within the middleware file, you'll discover both public and protected routes that define the application's navigation pathways.
     <ClerkProvider localization={ptBR}>
       <html lang="pt-BR">
         <body className={inter.className}>

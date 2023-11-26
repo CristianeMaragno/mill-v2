@@ -19,10 +19,7 @@ const CourseIdPage = async ({
     }
   });
 
-  console.log(course);
-
   if (!course) {
-    console.log("dashbaord");
     return redirect("/dashboard");
   }
 
