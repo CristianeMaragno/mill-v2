@@ -3,11 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Montserrat } from 'next/font/google'
-import { LayoutDashboard, Settings, Wrench } from "lucide-react";
+import { LayoutDashboard, Settings, Wrench, Zap } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { FreeCounter } from "@/components/free-counter";
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const poppins = Montserrat ({ weight: '600', subsets: ['latin'] });
 
@@ -32,13 +34,12 @@ const routes = [
 ];
 
 export const Sidebar = ({
-  apiLimitCount = 0,
   isPro = false
 }: {
-  apiLimitCount: number;
   isPro: boolean;
 }) => {
   const pathname = usePathname();
+  const proModal = useProModal();
 
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-sky-950 text-white">
@@ -69,10 +70,14 @@ export const Sidebar = ({
           ))}
         </div>
       </div>
-      <FreeCounter 
-        apiLimitCount={apiLimitCount} 
-        isPro={isPro}
-      />
+      <Card className="bg-white/10 border-0 mx-4">
+        <CardContent className="py-6">
+          {<Button onClick={proModal.onOpen} variant="premium" className="w-full">
+            Upgrade
+            <Zap className="w-4 h-4 ml-2 fill-white" />
+          </Button>}
+        </CardContent>
+      </Card>
     </div>
   );
 };

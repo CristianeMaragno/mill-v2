@@ -10,7 +10,7 @@ import 'next-cloudinary/dist/cld-video-player.css';
 import { useConfettiStore } from "@/hooks/use-confetti-store";
 
 interface VideoPlayerProps {
-  playbackId: string;
+  playbackId: string | null;
   courseId: string;
   chapterId: string;
   nextChapterId?: string;

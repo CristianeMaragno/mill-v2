@@ -10,14 +10,6 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model UserApiLimit {
-  id        String      @id @default(cuid())
-  userId    String   @unique
-  count     Int      @default(0)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
 model UserSubscription {
   id        String      @id @default(cuid())
   userId    String   @unique
@@ -61,8 +53,6 @@ model Chapter {
   videoUrl String? @db.Text
   position Int
 
-  muxData MuxData?
-
   courseId String
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
@@ -72,15 +62,6 @@ model Chapter {
   updatedAt DateTime @updatedAt
 
   @@index([courseId])
-}
-
-model MuxData {
-  id String @id @default(uuid())
-  assetId String
-  playbackId String?
-
-  chapterId String @unique
-  chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
 }
 
 model UserProgress {

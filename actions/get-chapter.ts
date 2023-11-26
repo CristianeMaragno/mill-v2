@@ -29,20 +29,12 @@ export const getChapter = async ({
       throw new Error("Chapter or course not found");
     }
 
-    let muxData = null;
     let attachments: Attachment[] = [];
     let nextChapter: Chapter | null = null;
 
     attachments = await prismadb.attachment.findMany({
       where: {
         courseId: courseId
-      }
-    });
-
-    
-    muxData = await prismadb.muxData.findUnique({
-      where: {
-        chapterId: chapterId,
       }
     });
 
@@ -70,7 +62,6 @@ export const getChapter = async ({
     return {
       chapter,
       course,
-      muxData,
       attachments,
       nextChapter,
       userProgress
@@ -80,7 +71,6 @@ export const getChapter = async ({
     return {
       chapter: null,
       course: null,
-      muxData: null,
       attachments: [],
       nextChapter: null,
       userProgress: null,
