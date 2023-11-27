@@ -53,14 +53,14 @@ export const ProModal = () => {
             {features.map((feature) => (
               <Card key={feature.href} className="p-3 border-black/5 flex items-center justify-between">
                 <div className="flex items-center gap-x-4">
-                  <div className={cn("p-2 w-fit rounded-md", feature.bgColor)}>
-                    <feature.icon className={cn("w-6 h-6", feature.color)} />
+                  <div className={cn("p-2 w-fit rounded-md bg-company-green")}>
+                    <feature.icon className={cn("w-6 h-6 text-company-light-green")} />
                   </div>
                   <div className="font-semibold text-sm">
                     {feature.label}
                   </div>
                 </div>
-                <Check className="text-primary w-5 h-5" />
+                <Check className="text-company-green w-5 h-5" />
               </Card>
             ))}
           </DialogDescription>

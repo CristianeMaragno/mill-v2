@@ -7,6 +7,22 @@ body,
 :root {
   height: 100%;
 }
+
+.cl-internal-b3fm6y{
+  background-color: #063b27;
+}
+
+.cl-formButtonPrimary{
+  background-color: #063b27;
+}
+
+.cl-internal-b3fm6y:hover{
+  background-color: #063b277c;
+}
+
+.cl-formButtonPrimary:hover{
+  background-color: #063b277c;
+}
  
 @layer base {
   :root {

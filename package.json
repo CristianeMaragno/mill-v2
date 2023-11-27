@@ -11,8 +11,10 @@
   "dependencies": {
     "@clerk/localizations": "^1.26.6",
     "@clerk/nextjs": "^4.25.6",
+    "@hookform/resolvers": "^3.3.2",
     "@prisma/client": "^5.5.0",
     "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-progress": "^1.0.3",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
@@ -34,6 +36,7 @@
     "react": "18.2.0",
     "react-confetti": "^6.1.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.48.2",
     "react-hot-toast": "^2.4.1",
     "react-quill": "^2.0.0",
     "stripe": "^14.1.0",
@@ -42,6 +45,7 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2",
     "typewriter-effect": "^2.21.0",
+    "zod": "^3.22.4",
     "zustand": "^4.4.4"
   },
   "devDependencies": {

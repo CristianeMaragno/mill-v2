@@ -34,7 +34,7 @@ const ChapterIdPage = async ({
   });
 
   if (!chapter || !course) {
-    return redirect("/")
+    return redirect("/dashboard")
   }
 
 

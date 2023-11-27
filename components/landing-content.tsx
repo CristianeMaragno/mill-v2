@@ -2,69 +2,47 @@
 
 import { Button } from "./ui/button";
 import PrincingCard from "./pricing-card";
-import { Dumbbell, Gamepad2, Microscope } from "lucide-react";
+import { Dumbbell, Equal, Gamepad2, Microscope, Plus, PlusCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Patua_One } from 'next/font/google';
+
+const font = Patua_One({weight: '400', subsets: ['latin'],});
 
 export const LandingContent = () => {
   return (
     <div className="pb-20">
-      <div id="section-about" className="my-8">
-        <h2 className="text-sky-700 text-4xl font-semibold text-center">O que é a Mill?</h2>
-        <p className="text-gray-400 py-8 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br/> 
-        incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet.</p>
-        <div className="space-y-8 lg:grid justify-items-center lg:grid-cols-3 sm:gap-6 xl:gap-6 lg:space-y-0 lg:mx-20">
-          <div className="px-8 flex items-center flex-col">
-            <Gamepad2 size={120} className="text-gray-500 text-center mb-4"/>
-            <h3 className="text-gray-500 text-1xl font-semibold text-center mb-4">Gamificação</h3>
-            <p className="text-gray-400 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+      <div className="my-20 mx-4 text-center flex flex-col items-center">
+        <h1 className={cn("text-company-green mb-8 text-3xl font-extrabold tracking-tight", font.className)}>Aprenda com facilidade, de qualquer lugar.</h1>
+        <p className="max-w-4xl font-light mb-12 text-company-green lg:mb-8 md:text-lg lg:text-xl">Nossa plataforma completa é mais que um conjunto de aulas, é uma jornada personalizada para o sucesso. Com ferramentas poderosas, orientação especializada e recursos exclusivos, estamos aqui para ser o impulso que você precisa.</p>
+
+        <div className="space-y-8 lg:grid justify-items-center lg:grid-cols-3 sm:gap-6 xl:gap-16 lg:space-y-0 lg:mx-20">
+          <div className="px-8 flex items-center flex-col bg-company-green/5 p-16 rounded-lg">
+            <h3 className="text-company-green text-6xl font-extrabold text-center mb-4">5min</h3>
+            <p className="text-company-green uppercase font-extralight text-center">Transforme seu dia em minutos! Nossas aulas relâmpago, com duração de até 5 minutos, oferecem conhecimento financeiro direto ao ponto.</p>
           </div>
 
-          <div className="px-8 flex items-center flex-col">
-            <Microscope size={120} className="text-gray-500 text-center mb-4"/>
-            <h3 className="text-gray-500 text-1xl font-semibold text-center mb-4">Educação Financeira</h3>
-            <p className="text-gray-400 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+          <div className="px-8 flex items-center flex-col bg-company-green/5 p-16 rounded-lg">
+            <h3 className="text-company-green text-6xl font-extrabold text-center mb-4">2-3x</h3>
+            <p className="text-company-green uppercase font-extralight text-center">Nossa abordagem única torna o aprendizado mais significativo, permitindo que você aplique imediatamente o conhecimento adquirido.</p>
           </div>
 
-          <div className="px-8 flex items-center flex-col">
-            <Dumbbell size={120} className="text-gray-500 text-center mb-4"/>
-            <h3 className="text-gray-500 text-1xl font-semibold text-center mb-4">Prática</h3>
-            <p className="text-gray-400 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+          <div className="px-8 flex items-center flex-col bg-company-green/5 p-16 rounded-lg">
+            <h3 className="text-company-green text-6xl font-extrabold text-center mb-4">20%</h3>
+            <p className="text-company-green uppercase font-extralight text-center">Nossa plataforma completa oferece aulas envolventes e recursos poderosos por 20% menos do que o custo de um educador financeiro tradicional.</p>
           </div>
         </div>
       </div>
 
-      <div id="section-prices" className="bg-sky-700 bg-opacity-40 px-20 py-16">
-        <h2 className="text-sky-700 text-4xl font-semibold text-center">Preços</h2>
-        <p className="text-neutral-100 py-8 text-center">Selecione o plano que mais cobina com você</p>
-        <div className="space-y-8 lg:grid justify-items-center lg:grid-cols-2 sm:gap-6 xl:gap-12 lg:space-y-0">
-          <PrincingCard price={0} name="Gratuito" description="Melhor opção para iniciar">
-            <ul className="mb-8 space-y-4 text-left">
-              <li className="flex items-center space-x-3">Lorem ipsum</li>
-              <li className="flex items-center space-x-3">Lorem ipsum</li>
-              <li className="flex items-center space-x-3">Lorem ipsum</li>
-              <li className="flex items-center space-x-3">Lorem ipsum</li>
-            </ul>
-          </PrincingCard>
-          <PrincingCard price={15.99} name="Premium" description="Para quem quer ir fundo">
-            <ul className="mb-8 space-y-4 text-left">
-              <li className="flex items-center space-x-3">Lorem ipsum</li>
-              <li className="flex items-center space-x-3">Lorem ipsum</li>
-              <li className="flex items-center space-x-3">Lorem ipsum</li>
-              <li className="flex items-center space-x-3">Lorem ipsum</li>
-            </ul>
-          </PrincingCard>
+      <div className="text-center flex flex-col items-center">
+        <h1  className={cn("text-company-green mb-12 text-6xl font-extrabold", font.className)}>Conteúdo fácil</h1>
+        <div className="rounded-full p-4 bg-company-light-green mb-12">
+          <Plus className="text-company-green"/>
         </div>
-      </div>
-
-      <div id="section-learn" className="px-20 py-16 flex flex-col items-center">
-        <h2 className="text-sky-700 text-4xl font-semibold text-center">Aprenda</h2>
-        <p className="text-gray-400 py-8 text-center">Se inscreva a nossa newsletter receba informações relevantes sobre finanças</p>
-
-        <input type="text" id="first_name" className="bg-gray-50 max-w-md mb-6 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-300 focus:border-sky-500 block w-full p-2.5" placeholder="Email"/>
-
-        <Button className="rounded-full">
-          Me cadastrar na newsletter
-        </Button>
+        <h1 className={cn("text-company-green mb-12 text-6xl font-extrabold", font.className)}>Prática</h1>
+        <div className="rounded-full p-4 bg-company-light-green mb-12">
+          <Equal className="text-company-green"/>
+        </div>
+        <h1 className={cn("text-company-green mb-12 text-6xl font-extrabold max-w-4xl", font.className)}>Resultados reais e mais facilidade para absorver o conteúdo</h1>
       </div>
     </div>
   )

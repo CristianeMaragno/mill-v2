@@ -24,6 +24,7 @@ model Course {
   userId String
   title String @db.Text
   description String? @db.Text
+  isPremium Boolean @default(false)
 
   chapters Chapter[]
   attachments Attachment[]

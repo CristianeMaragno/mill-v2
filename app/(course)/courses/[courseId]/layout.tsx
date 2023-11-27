@@ -44,6 +44,11 @@ const CourseLayout = async ({
     return redirect("/dashboard");
   }
 
+  if (course.isPremium) {
+    return redirect("/dashboard")
+  }
+
+
   const progressCount = await getProgress(userId, course.id);
 
   return (
