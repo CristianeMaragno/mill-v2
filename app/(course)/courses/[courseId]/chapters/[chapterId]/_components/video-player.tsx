@@ -60,7 +60,7 @@ export const VideoPlayer = ({
       <CldVideoPlayer
         width="1920"
         height="1080"
-        src="test_hqonmq"
+        src={playbackId ?? ""}
         colors={{
           accent: '#38bdf8',
           base: '#0369a1',
