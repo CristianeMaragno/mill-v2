@@ -24,8 +24,8 @@ export const ModuleCard = ({
   const proModal = useProModal();
 
   return (
-    <div className="col-span-1 flex flex-col">
-      {active && <Card onClick={() => router.push(href)} className="p-8 border-company-green/5 bg-company-green/10 flex flex-col items-center justify-between hover:shadow-md transition cursor-pointer">
+    <div className="col-span-1 flex flex-col justify-between row-start-1 row-end-4">
+      {active && <Card onClick={() => router.push(href)} className="p-8 h-full border-company-green/5 bg-company-green/10 flex flex-col items-center hover:shadow-md transition cursor-pointer">
         <PlayCircle className="w-24 h-24 text-company-green mb-8"/>
         <div className="flex items-center gap-x-4 mb-8">
           <div className="flex flex-col">
@@ -38,7 +38,7 @@ export const ModuleCard = ({
         </div>
       </Card>}
 
-      {!active && <Card onClick={proModal.onOpen} className="p-8 border-black/5 flex flex-col items-center justify-between hover:shadow-md transition cursor-pointer">
+      {!active && <Card onClick={proModal.onOpen} className="p-8 h-full border-black/5 flex flex-col items-center hover:shadow-md transition cursor-pointer">
         <Lock className="w-24 h-24 text-slate-500 mb-8"/>
         <div className="flex items-center gap-x-4">
           <div className="flex flex-col">

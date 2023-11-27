@@ -18,7 +18,7 @@ const DashboardPage = async () => {
         </p>
       </div>
 
-      <div className="px-4 md:px-20 lg:px-32 space-y-4 lg:space-y-0 lg:grid lg:grid-cols-3 md:gap-4 items-stretch grid-flow-row auto-rows-max">
+      <div className="px-4 md:px-20 lg:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:px-32 space-y-4 lg:space-y-0 auto-rows-fr grid-flow-col">
         {modules.map((module) => (
           <ModuleCard key={module.href} active={isPro ? true : !module.premium} href={module.href} label={module.label} description={module.description}/>
         ))}
