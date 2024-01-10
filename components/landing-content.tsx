@@ -42,7 +42,7 @@ export const LandingContent = () => {
         <div className="rounded-full p-4 bg-company-light-green mb-12">
           <Equal className="text-company-green"/>
         </div>
-        <h1 className={cn("text-company-green mb-12 text-6xl font-extrabold max-w-4xl", font.className)}>Resultados reais e mais facilidade para absorver o conteúdo</h1>
+        <h1 className={cn("text-company-green mb-12 text-6xl font-extrabold max-w-4xl", font.className)}>Resultados reais</h1>
       </div>
     </div>
   )

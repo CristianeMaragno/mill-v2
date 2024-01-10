@@ -70,10 +70,10 @@ export const Sidebar = ({
       </div>
       <Card className="bg-white/10 border-0 mx-4">
         <CardContent className="py-6">
-          {<Button onClick={proModal.onOpen} variant="premium" className="w-full">
+          {!isPro ? <Button onClick={proModal.onOpen} variant="premium" className="w-full">
             Upgrade
             <Zap className="w-4 h-4 ml-2 fill-white" />
-          </Button>}
+          </Button> : null}
         </CardContent>
       </Card>
     </div>

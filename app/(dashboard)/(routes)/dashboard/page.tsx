@@ -14,7 +14,7 @@ const DashboardPage = async () => {
           Seu painel
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          Comece a aprender sobre finanaças agora de forma fácil e divertida.
+          Comece a aprender sobre finanças agora de forma fácil e divertida.
         </p>
       </div>
 
