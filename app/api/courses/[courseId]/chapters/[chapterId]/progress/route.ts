@@ -32,6 +32,23 @@ export async function PUT(
       }
     })
 
+    const streak = await prismadb.streak.findFirst({
+      where: {
+        userId: userId,
+      }
+    });
+
+    const updateStreak = await prismadb.streak.update({
+      where: {
+        id: streak?.id,
+        userId: userId,
+      },
+      data: {
+        counter: {increment: 1},
+        lastActivity: new Date()
+      },
+    })
+
     return NextResponse.json(userProgress);
   } catch (error) {
     console.log("[CHAPTER_ID_PROGRESS]", error);

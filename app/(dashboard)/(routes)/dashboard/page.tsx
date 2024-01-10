@@ -1,11 +1,14 @@
 import { checkSubscription } from "@/lib/subscription";
+import { checkStreak } from "@/lib/utils";
 import { modules } from "@/constants";
 import { ModuleCard } from "@/components/module-card";
 import { CandlestickChart, Pencil, PiggyBank } from "lucide-react";
+import StreakCard from "@/components/streak-card";
 
 
 const DashboardPage = async () => {
   const isPro = await checkSubscription();
+  const streak = await checkStreak();
 
   return ( 
     <div>
@@ -16,6 +19,10 @@ const DashboardPage = async () => {
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
           Comece a aprender sobre finanças agora de forma fácil e divertida.
         </p>
+      </div>
+
+      <div className="px-4 md:px-20 mb-8">
+        <StreakCard streak={streak}/>
       </div>
 
       <div className="px-4 md:px-20 lg:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:px-32 space-y-4 lg:space-y-0 auto-rows-fr grid-flow-col">
