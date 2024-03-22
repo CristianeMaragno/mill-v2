@@ -17,8 +17,16 @@ export const LandingNavbar = () => {
   return (
     <nav className="p-4 md:px-60 bg-company-light-green flex items-center justify-between">
       <Link href="/" className="flex items-center">
-        <h1 className={cn("text-5xl font-bold text-company-green/80", font.className)}>
-          Mill
+        <Image
+          className="pr-4"
+          src="/logo.svg"
+          width={68}
+          height={81}
+          alt="Logo"
+        />
+
+        <h1 className={cn("text-4xl font-bold text-company-green/80", font.className)}>
+          Plante Riqueza
         </h1>
       </Link>
       <div className="flex items-center gap-x-2">

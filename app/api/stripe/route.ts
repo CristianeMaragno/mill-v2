@@ -43,7 +43,7 @@ export async function GET() {
           price_data: {
             currency: "BRL",
             product_data: {
-              name: "Mill Premium",
+              name: "Plante Riqueza Premium",
               description: "Acesso total da plataforma"
             },
             unit_amount: 1599,

@@ -12,7 +12,7 @@ export const LandingContent = () => {
   return (
     <div className="pb-20">
       <div className="my-20 mx-4 text-center flex flex-col items-center">
-        <h1 className={cn("text-company-green mb-8 text-3xl font-extrabold tracking-tight", font.className)}>Aprenda com facilidade, de qualquer lugar.</h1>
+        <h1 className={cn("text-company-green mb-8 text-2xl font-extrabold tracking-tight", font.className)}>Aprenda com facilidade, de qualquer lugar.</h1>
         <p className="max-w-4xl font-light mb-12 text-company-green lg:mb-8 md:text-lg lg:text-xl">Nossa plataforma completa é mais que um conjunto de aulas, é uma jornada personalizada para o sucesso. Com ferramentas poderosas, orientação especializada e recursos exclusivos, estamos aqui para ser o impulso que você precisa.</p>
 
         <div className="space-y-8 lg:grid justify-items-center lg:grid-cols-3 sm:gap-6 xl:gap-16 lg:space-y-0 lg:mx-20">
