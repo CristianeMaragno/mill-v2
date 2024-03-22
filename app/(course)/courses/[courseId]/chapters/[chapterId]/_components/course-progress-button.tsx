@@ -45,7 +45,7 @@ export const CourseProgressButton = ({
       toast.success("Progresso atualizado");
       router.refresh();
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Algo deu errado");
     } finally {
       setIsLoading(false);
     }

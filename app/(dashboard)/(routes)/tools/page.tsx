@@ -23,7 +23,7 @@ const ConversationPage = () => {
       if (error?.response?.status === 403) {
         proModal.onOpen();
       } else {
-        toast.error("Something went wrong.");
+        toast.error("Algo deu errado");
       }
     }finally {
       router.refresh(); // This makes the sidebar be updated

@@ -43,7 +43,7 @@ export const VideoPlayer = ({
           confetti.onOpen();
         }
 
-        toast.success("Progress updated");
+        toast.success("Aula conluída");
         router.refresh();
 
         if (nextChapterId) {
@@ -51,7 +51,7 @@ export const VideoPlayer = ({
         }
       }
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Algo deu errado");
     }
   }
 
