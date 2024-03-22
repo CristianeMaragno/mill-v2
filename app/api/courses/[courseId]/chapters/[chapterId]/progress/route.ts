@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-
 import prismadb from "@/lib/prismadb";
+import { intervalToDuration } from "date-fns";
 
 export async function PUT(
   req: Request,
@@ -38,13 +38,33 @@ export async function PUT(
       }
     });
 
+    var counter = 0;
+    if(streak){
+      if(streak.lastActivity){
+        var currentDate =  new Date();
+        if(streak.lastActivity.getDay() == currentDate.getDay() && streak.lastActivity.getMonth() == currentDate.getMonth() && streak.lastActivity.getFullYear() == currentDate.getFullYear()){
+          counter = streak.counter;
+        }else{
+          var result = intervalToDuration({start: streak.lastActivity, end: currentDate});
+          if(result.days && result.days > 2){
+            counter = 1;
+          }else{
+            counter = streak.counter + 1;
+          }
+        }
+      }else{
+        counter = 1;
+      }
+
+    }
+
     const updateStreak = await prismadb.streak.update({
       where: {
         id: streak?.id,
         userId: userId,
       },
       data: {
-        counter: {increment: 1},
+        counter: counter,
         lastActivity: new Date()
       },
     })
