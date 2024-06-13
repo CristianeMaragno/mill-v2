@@ -53,6 +53,7 @@ model Chapter {
   description String? @db.Text
   videoUrl String? @db.Text
   position Int
+  question String? @db.Text
 
   courseId String
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
@@ -68,11 +69,11 @@ model Chapter {
 model UserProgress {
   id String @id @default(uuid())
   userId String
+  isCompleted Boolean @default(false)
+  response String? @db.Text
 
   chapterId String
   chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
-
-  isCompleted Boolean @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

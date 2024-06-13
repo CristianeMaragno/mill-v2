@@ -9,6 +9,7 @@ import { Preview } from "@/components/preview";
 
 import { VideoPlayer } from "./_components/video-player";
 import { CourseProgressButton } from "./_components/course-progress-button";
+import { CourseQuestion } from "./_components/course-question";
 
 const ChapterIdPage = async ({
   params
@@ -98,6 +99,13 @@ const ChapterIdPage = async ({
               </div>
             </>
           )}
+          <Separator />
+          <CourseQuestion
+            chapterId={params.chapterId}
+            courseId={params.courseId}
+            title={chapter.question}
+          >
+          </CourseQuestion>
         </div>
       </div>
     </div>
