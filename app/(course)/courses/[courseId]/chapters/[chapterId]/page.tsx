@@ -100,12 +100,6 @@ const ChapterIdPage = async ({
             </>
           )}
           <Separator />
-          <CourseQuestion
-            chapterId={params.chapterId}
-            courseId={params.courseId}
-            title={chapter.question}
-          >
-          </CourseQuestion>
         </div>
       </div>
     </div>
